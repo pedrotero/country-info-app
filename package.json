@@ -1,0 +1,18 @@
+{
+  "name": "country-info-app",
+  "version": "1.0.0","main": "index.js",
+  "scripts": {
+        "install:be": "npm --prefix ./country-info-be install",
+        "install:fe": "npm --prefix ./country-info-fe install",
+        "install:all": "npm run install:be && npm run install:fe",
+        "start:be": "npm --prefix ./country-info-be run dev",
+        "start:fe": "npm --prefix ./country-info-fe run dev",
+        "start:both": "npm run install:all && concurrently \"npm run start:be\" \"npm run start:fe\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.0.1"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
